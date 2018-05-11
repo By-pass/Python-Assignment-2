@@ -1,0 +1,27 @@
+"""Junsoo Lee, Python Assignment #2
+
+
+"""
+# Basic set, with square in middel of the screen
+def setup():
+    size(500,500)
+    fill(0, 255, 0 )
+    rect(200,200, 100,100)
+    
+# This is the part where square moves when user click mouse.
+def mouseClicked():
+    background(0)
+    fill(0,mouseX,mouseY) # Need solid color instead of color changes depends on x,y value
+    rect(mouseX,mouseY, 50,50)
+    
+# This    
+def keyPressed():    
+    background(mouseX)
+    if key == "r": # r for red
+    
+    if key == "b": # b for blue
+ 
+    if key == "g": # g for greyscale color 
+    
+""" for the note, I need to make red = 200 , 0 , 0???
+go through stuff on code hs chapter  tuffle? to save color data
