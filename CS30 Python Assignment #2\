@@ -25,3 +25,50 @@ def keyPressed():
     
 """ for the note, I need to make red = 200 , 0 , 0???
 go through stuff on code hs chapter  tuffle? to save color data
+----------------------------------------------------------------------------------------------
+Date: 14/05/2018 ver.2
+
+# Basic set, with square in middel of the screen
+def setup():
+    size(500,500)
+    background(102, 102, 102)
+    fill(216, 84, 84)
+    rect(200,200, 100,100)
+colour = (216, 84, 84)     
+# This is the part where square moves when user click mouse.
+def mouseClicked():
+    background(102, 102, 102)
+    fill(216, 84, 84)
+    rect(mouseX-50,mouseY-50, 100,100)
+    
+# This is the part change of color is happening    
+def keyPressed():  
+    global colour  
+    if key == "y": # y for yellow
+        colour = (250, 255, 109)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    elif key == "b": # b for blue
+        colour = (87, 176, 249)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    elif key == "g": # g for greyscale color 
+        colour = (50)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    else:
+        fill (200)
+    
+        if key != "y":
+            text("Press B for blue, G for green or Y for yellow", 80, 20)
+        if key != "b":
+            text("Press B for blue, G for green or Y for yellow", 80, 20)
+        if key != "g":
+            text("Press B for blue, G for green or Y for yellow", 80, 20)
+            
+
+def draw():
+    return
