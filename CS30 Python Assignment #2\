@@ -123,5 +123,60 @@ def keyPressed():
     
 def draw():
     return
+    
+----------------------------------------------------------------------------------------------
+Final Version. 16,05,2018
+"""Junsoo Lee, Python Assignment #2
+This is an interactive program that starts with one square in middle of the screen.
+If user clicks anywhere in canvas, a square will fillow cursor
+and depends on key input, user can change the color of the square.
+"""
+# Basic set, with square in middel of the screen
+def setup():
+    size(500,500)
+    background(102)
+    fill(216, 84, 84)
+    rect(200,200, 100,100)
+    fill(255)
+    textSize(15)
+    text("If you click around in canvas, " , 3, 18)
+    text("Thie square will move to where you clicked.",3 , 35)
+    text("Also you can change the color of box", 3, 52)
+    text("By pressing 'y', 'g', and 'b' for yellow, green and blue.", 3, 68)
+colour = (216, 84, 84) 
+
+# This is the part where square moves when user click mouse.
+def mouseClicked():
+    background(102, 102, 102) # Back ground color
+    fill(colour[0], colour[1], colour[2]) # Color of square, depends on key press
+    rect(mouseX-50,mouseY-50, 100,100)
+    
+# This is the part where changing color is happening    
+def keyPressed():  
+    global colour # Global, call it any where
+    
+    if key == "y": # y for yellow
+        colour = (250, 255, 109)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    elif key == "b": # b for blue
+        colour = (87, 176, 249)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    elif key == "g": # g for green
+        colour = (126, 239, 122)
+        background(102, 102, 102)
+        fill(colour[0], colour[1], colour[2])
+        rect(mouseX-50,mouseY-50, 100,100)
+    else:
+        # Greyscale color
+        textSize(15)
+        text("Press 'y', 'g', and 'b' for yellow, green and blue.", 3, 34)
+
+# Doesn't do anything but MUST need this part.        
+def draw():
+    return
 
 
